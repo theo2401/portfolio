@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- PAGE ACCUEUIL -->
+
+
+  <section class="wall">
+
+    <header>
+      <div class="wrapper">
+
+        <h1 class="logo">Flaux<span> Théo</span></h1>
+
+        <nav class="main-nav">
+
+          <ul>
+            <li><a href="#accueil"><i name="accueil"></i>Accueil</a></li>
+            <li><a href="#competences"><i name="competences"></i>Compétences</a></li>
+            <li><a href="#contact"><i name="contact"></i>Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <div class="boxtext">
+      <p id="box">Bienvenue sur mon portfolio !</p>
+    </div>
+
+  </section>
+
+
+
+  <!-- BARRES DE PROGRESSION -->
+
+<span id="competences"></span>
+  <section class="competences">
+         <span id="competences"></span>
+
+    <h2>Mes compétences !</h2>
+
+    <p>HTML</p>
+    <div class="container">
+      <div class="skills html">60%</div>
+    </div>
+
+    <p>CSS</p>
+    <div class="container">
+      <div class="skills2 css">50%</div>
+    </div>
+
+    <p>JavaScript</p>
+    <div class="container">
+      <div class="skills js">25%</div>
+    </div>
+
+    <p>PHP</p>
+    <div class="container">
+      <div class="skills2 php">10%</div>
+    </div>
+
+   <hr>
+
+    <!-- FORMULAIRE DE CONTACT -->
+
+
+    <div class="contain">
+      
+
+      <h3>Formulaire de contact</h3>
+<span id="contact"></span>
+      
+      <form action="action_page">
+    
+        <label for="fname">Nom</label>
+        <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
+        
+    
+        <label for="lname">Prénom</label>
+        <input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
+        
+    
+        <label for="subject">Sujet</label>
+        <textarea id="subject" name="subject" placeholder="De quoi voulez vous parler.." style="height:200px"></textarea>
+        
+    
+        <input type="submit" value="Envoyer">
+    
+      </form>
+    </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

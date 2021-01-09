@@ -287,6 +287,7 @@ img.active {
   cursor: pointer;
   color: white;
 }
+
 /* Formulaire de contact */
 input[type=text], select, textarea {
   width: 100%; 
@@ -325,6 +326,14 @@ input[type=submit]:hover {
 label{
   color: #ebebd3;
 }
+
+/* Modification formspree */
+
+#formbutton-button{
+  color: black;
+}
+
+
 
 @media only screen and (min-width: 900px){
 

@@ -198,8 +198,8 @@ p#box{
 
 
 h2.presentation{
+  margin-top: 60px;
   padding-left: 50px;
-  margin-bottom: 40px;
 }
 
 
@@ -218,6 +218,11 @@ h2{
   font-size: 2em;
 }
 
+h2.portfolio{
+  padding-left: 50px;
+  margin-bottom: 40px;
+}
+
 h3{
   text-align: left;
   font-family: 'Abel', sans-serif;
@@ -232,6 +237,7 @@ h3{
   background-color: #ddd; 
   display: flex;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .skills {

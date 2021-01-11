@@ -1,49 +1,44 @@
-const items = document.querySelectorAll('img');
-const nbSlide = items.length;
-const suivant = document.querySelector('.right');
-const precedent = document.querySelector('.left');
-let count = 0;
+let slidePosition = 0;
+const slides = document.getElementsByClassName('carousel_item');
+const totalSlides = slides.length;
 
-function slideSuivante(){
-    items[count].classList.remove('active');
+document.
+    getElementById('carousel_button-next')
+    .addEventListener('click', function(){
+        moveToNextSlide();
+    });
 
-    if(count < nbSlide - 1){
-        count++;
+    document.
+    getElementById('carousel_button-prev')
+    .addEventListener('click', function(){
+        moveToPrevSlide();
+    });
+
+function updateSlidePosition(){
+   for (let slide of slides){
+       slide.classList.remove('carousel_item-visible');
+       slide.classList.add('carousel_item-hidden');
+   }
+
+   slides[slidePosition].classList.add('carousel_item-visible');
+};
+
+function moveToNextSlide(){
+    if (slidePosition === totalSlides - 1){
+        slidePosition = 0;
     } else {
-        count = 0;
+        slidePosition++;
     }
 
-    items[count].classList.add('active')
-    console.log(count);
-    
-}
-suivant.addEventListener('click', slideSuivante)
+    updateSlidePosition();
+};
 
-
-function slidePrecedente(){
-    items[count].classList.remove('active');
-
-    if(count > 0){
-        count--;
+function moveToPrevSlide(){
+    if (slidePosition === 0){
+        slidePosition = totalSlides - 1;
     } else {
-        count = nbSlide - 1;
+        slidePosition--;
     }
 
-    items[count].classList.add('active')
-    // console.log(count);
-    
-}
-precedent.addEventListener('click', slidePrecedente)
-
-function keyPress(e){
-    console.log(e);
-    
-    if(e.keyCode === 37){
-        slidePrecedente();
-    } else if(e.keyCode === 39){
-        slideSuivante();
-    }
-}
-document.addEventListener('keydown', keyPress)
-
-
+    updateSlidePosition();
+};

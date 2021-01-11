@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css"> 
+  <link rel="icon" type="icone" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Abel&family=Quicksand&display=swap" rel="stylesheet">
 </head>
@@ -93,26 +94,31 @@
    </div>
   </section>
 
-    <!-- Partie projets -->
+    <!-- PARTIE PROJETS -->
 
 <span id="projet"></span>
 
     <h2 class="portfolio">Mes projets</h2>
 
-    <div class="container_slider">
-
-      <div class="slider">
-        <img class="active" src="jeu de memoire2.jpg">
-        <img src="site_wordpress.jpg">
-      </div>
-  
-      <div class="cont-btn">
-        <div class="btn-nav left">←</div>
-        <div class="btn-nav right">→</div>
-      </div>
-  
+<center>
+  <div class="carousel">
+    <div class="carousel_item carousel_item-visible">
+      <img src="/site_wordpressBonnetaille.jpg">
     </div>
-     
+    <div class="carousel_item">
+      <img src="/jeu de memoire2bonnetaille.jpg">
+    </div>
+    <div class="carousel_item">
+      <img src="/site_priscilleBonnetaille.jpg">
+    </div>
+
+        <div class="carousel_actions">
+          <button id="carousel_button-prev" aria-label="Image précedente"><</button>
+          <button id="carousel_button-next" aria-label="Image suivante">></button> 
+        </div>
+    </div>
+</center>
+
 
    <hr>
 
@@ -140,15 +146,46 @@
         
     
         <input type="submit" value="Envoyer">
-    
-      </form>
-    </div>
+        
+    </form>
+  </form>
+</div>
 
     
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
     window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-    formbutton("create", {action: "https://formspree.io/f/xbjpqkgl"})
+    formbutton("create", {
+      action: "https://formspree.io/f/xbjpqkgl",
+      styles: {
+        fontFamily:'"Lato", sans-serif',
+        button: {
+          background: "#000",
+        },
+        fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+        title: {
+          background: "#808080",
+          letterSpacing: "0.05em",
+          textTransform: "uppercase"
+        }
+        
+      }
+    })
     </script>
   <script src="script.js"></script>
 </body>

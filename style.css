@@ -280,13 +280,12 @@ hr{
 }
 
 .carousel .carousel_actions button {
-  border-radius: 50px;
   border: 0;
-  background-color: #000000;
+  background-color: #000000a4;
   color:#ebebd3;
   font-weight: bold;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .carousel .carousel_actions button#carousel_button-prev{

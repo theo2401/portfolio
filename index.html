@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
   <link rel="icon" type="icone" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Abel&family=Quicksand&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
 
 <body>
 
-<!-- PAGE ACCUEUIL -->
+  <!-- PAGE ACCUEUIL -->
 
 
   <section class="wall">
@@ -54,19 +55,21 @@
   <span id="present"></span>
   <h2 class="presentation">Présentation</h2>
 
-<div class="banniere">
+  <div class="banniere">
 
-  <p class="phrasePresentation">
-    Je suis actuellement en formation à l'institut Marie Thérèse Solacroup pour devenir développeur web et web mobile. <br>
-    Passionné de nouvelles technologies, je souhaite devenir développeur Full-stack afin d'avoir une total autonomie sur les projets que je souhaite réaliser. <br>
-  </p>
-</div>
+    <p class="phrasePresentation">
+      Je suis actuellement en formation à l'institut Marie Thérèse Solacroup pour devenir développeur web et web mobile.
+      <br>
+      Passionné de nouvelles technologies, je souhaite devenir développeur Full-stack afin d'avoir une total autonomie
+      sur les projets que je souhaite réaliser. <br>
+    </p>
+  </div>
 
   <!-- BARRES DE PROGRESSION -->
 
-<span id="competences"></span>
+  <span id="competences"></span>
   <section class="competences">
-         
+
 
     <h2 id="competence">Mes compétences</h2>
 
@@ -91,102 +94,108 @@
     </div>
 
     </div>
-   </div>
+    </div>
   </section>
 
-    <!-- PARTIE PROJETS -->
+  <!-- PARTIE PROJETS -->
 
-<span id="projet"></span>
+  <span id="projet"></span>
 
-    <h2 class="portfolio">Mes projets</h2>
+  <h2 class="portfolio">Mes projets</h2>
 
-<center>
-  <div class="carousel">
-    <div class="carousel_item carousel_item-visible">
-      <img src="/site_wordpressBonnetaille.jpg">
+  <center>
+    <div class="carousel">
+      <div class="carousel_item carousel_item-visible">
+        <img src="/site_wordpressBonnetaille.jpg">
+      </div>
+      <div class="carousel_item">
+        <img src="/jeu de memoire2bonnetaille.jpg">
+      </div>
+      <div class="carousel_item">
+        <img src="/site_priscilleBonnetaille.jpg">
+      </div>
+
+      <div class="carousel_actions">
+        <button id="carousel_button-prev" aria-label="Image précedente">
+          </button> <button id="carousel_button-next" aria-label="Image suivante">>
+        </button>
+      </div>
     </div>
-    <div class="carousel_item">
-      <img src="/jeu de memoire2bonnetaille.jpg">
-    </div>
-    <div class="carousel_item">
-      <img src="/site_priscilleBonnetaille.jpg">
-    </div>
-
-        <div class="carousel_actions">
-          <button id="carousel_button-prev" aria-label="Image précedente"><</button>
-          <button id="carousel_button-next" aria-label="Image suivante">></button> 
-        </div>
-    </div>
-</center>
+  </center>
 
 
-   <hr>
+  <hr>
 
-    <!-- FORMULAIRE DE CONTACT -->
+  <!-- FORMULAIRE DE CONTACT -->
 
 
-    <div class="contain">
-      
+  <div class="contain">
 
-      <h3>Formulaire de contact (non fonctionnel)</h3>
-      <span id="contact"></span>
-      
-      <form action="action_page">
-    
-        <label for="fname">Nom</label>
-        <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
-        
-    
-        <label for="lname">Prénom</label>
-        <input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
-        
-    
-        <label for="subject">Sujet</label>
-        <textarea id="subject" name="subject" placeholder="De quoi voulez vous parler.." style="height:200px"></textarea>
-        
-    
-        <input type="submit" value="Envoyer">
-        
+
+    <h3>Formulaire de contact (non fonctionnel)</h3>
+    <span id="contact"></span>
+
+    <form action="action_page">
+
+      <label for="fname">Nom</label>
+      <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
+
+
+      <label for="lname">Prénom</label>
+      <input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
+
+
+      <label for="subject">Sujet</label>
+      <textarea id="subject" name="subject" placeholder="De quoi voulez vous parler.." style="height:200px"></textarea>
+
+
+      <input type="submit" value="Envoyer">
+
     </form>
-  </form>
-</div>
+    </form>
+  </div>
 
-    
-    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+
+  <script src="https://formspree.io/js/formbutton-v1.0.0.min.js" defer></script>
+  <script>
+    /* paste this in verbatim */
+    window.formbutton = window.formbutton || function () {
+      (formbutton.q = formbutton.q || []).push(arguments);
+    };
+    /* customize formbutton here*/
     formbutton("create", {
       action: "https://formspree.io/f/xbjpqkgl",
-      styles: {
-        fontFamily:'"Lato", sans-serif',
-        button: {
-          background: "#000",
+      buttonImg: "<i class='far fa-paper-plane' style='font-size:24px'/>", // <-- new button icon
+      title: "Contactez moi !",
+      fields: [{
+          type: "email",
+          label: "Email:",
+          name: "email",
+          required: true,
+          placeholder: "votre@email.com"
         },
-        fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-        placeholder: "your@email.com"
-      },
-      {
-        type: "textarea",
-        label: "Message:",
-        name: "message",
-        placeholder: "What's on your mind?",
-      },
-      { type: "submit" }      
-    ],
-        title: {
-          background: "#808080",
-          letterSpacing: "0.05em",
-          textTransform: "uppercase"
+        {
+          type: "textarea",
+          label: "Message:",
+          name: "message",
+          placeholder: "Votre message",
+        },
+        {
+          type: "submit"
         }
-        
-      }
-    })
-    </script>
+      ],
+      styles: {
+        fontFamily: "Montserrat",
+        title: {
+          background: "#333333",
+        },
+        button: {
+          background: "black",
+        }
+      },
+      initiallyVisible: false
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 

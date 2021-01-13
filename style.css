@@ -297,6 +297,11 @@ hr{
 }
 
 /* Formulaire de contact */
+
+form{
+margin: 50px;
+}
+
 input[type=text], select, textarea {
   width: 100%; 
   padding: 12px; 
@@ -311,13 +316,14 @@ input[type=text], select, textarea {
 input[type=submit] {
   background-color: #000000;
   color: #ebebd3;
-  padding: 12px 20px;
+  padding: 12px 40px;
   border: solid 2px #ebebd3;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
   display: block;
-  margin : auto;
+  margin: auto;
+  margin-top: 25px;
 }
 
 /* Hover au passage de la souris*/

@@ -248,6 +248,9 @@ hr{
 
 /* Galerie de projets */
 
+.centrer{
+  text-align: center;
+}
 
 .carousel {
   overflow: hidden;
